@@ -90,7 +90,7 @@ fun Wallet(
 
     Surface(
         Modifier.padding(top = localBottomSheetScrollState.topPadding),
-        color = MaterialTheme.colorScheme.background,
+        color = MaterialTheme.colorScheme.surfaceContainerLowest,
     ) {
         Column {
             val days = if (dateToValue.value !== null) {
