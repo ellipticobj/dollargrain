@@ -28,7 +28,7 @@ fun openInBrowser(context: Context, link: String) {
         Toast
             .makeText(
                 context,
-                context.getString(R.string.copy_in_clipboard),
+                "copied to keyboard",
                 Toast.LENGTH_LONG
             )
             .show()
@@ -55,7 +55,7 @@ fun sendEmail(
         Toast
             .makeText(
                 context,
-                context.getString(R.string.not_found_email_clients),
+                "no email clients found",
                 Toast.LENGTH_LONG
             )
             .show()

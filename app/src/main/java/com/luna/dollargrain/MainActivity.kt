@@ -49,10 +49,9 @@ val LocalWindowInsets = compositionLocalOf { PaddingValues(0.dp) }
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     // Broke tests. Set to true for tests
-    private val isDone = mutableStateOf(false)
-    private val isReady = mutableStateOf(false)
+    private val isDone: MutableState<Boolean> = mutableStateOf(false)
+    private val isReady: MutableState<Boolean> = mutableStateOf(false)
 
-    //TODO: Remove after 01.01.2024. Need for migration to DataStore
     @Inject
     lateinit var storageDao: StorageDao
 
@@ -80,18 +79,15 @@ class MainActivity : ComponentActivity() {
                 isReady.value = true
             }
 
-
             val widthSizeClass = calculateWindowSizeClass(this).widthSizeClass
 
             if (widthSizeClass == WindowWidthSizeClass.Compact) {
                 LockScreenOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
             }
 
-
             val windowInsets = WindowInsets
                 .systemBars
                 .asPaddingValues()
-
 
             CatchAndSendCrashReport()
 
