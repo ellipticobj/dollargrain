@@ -40,7 +40,7 @@ fun AverageSpendCard(
         } else {
             "-"
         },
-        label = stringResource(R.string.average_spent),
+        label = "average spent",
         contentPadding = PaddingValues(vertical = 8.dp, horizontal = 32.dp),
         colors = CardDefaults.cardColors()
     )

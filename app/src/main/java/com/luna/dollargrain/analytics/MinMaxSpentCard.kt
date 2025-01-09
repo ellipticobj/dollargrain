@@ -48,7 +48,7 @@ fun MinMaxSpentCard(
     currency: ExtendCurrency,
 ) {
     val context = LocalContext.current
-    
+
     val minSpent = spends.minByOrNull { it.value }
     val maxSpent = spends.maxByOrNull { it.value }
 
@@ -85,7 +85,7 @@ fun MinMaxSpentCard(
         } else {
             "-"
         },
-        label = stringResource(if (isMin) R.string.min_spent else R.string.max_spent),
+        label = if (isMin) "minimum spending" else "maximum spending",
         colors = CardDefaults.cardColors(
             containerColor = harmonizedColor.container,
             contentColor = harmonizedColor.onContainer,

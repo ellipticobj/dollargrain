@@ -44,7 +44,6 @@ import java.time.LocalDate
 import java.util.*
 
 
-@OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun BudgetConstructor(
     forceChange: Boolean = false,

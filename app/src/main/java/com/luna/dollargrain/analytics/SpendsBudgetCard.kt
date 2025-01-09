@@ -48,7 +48,7 @@ fun SpendsBudgetCard(
     currency: ExtendCurrency,
 ) {
     val context = LocalContext.current
-    
+
     val percent = remember { BigDecimal(1).minus(spend.divide(budget, 2, RoundingMode.HALF_EVEN)) }
 
     val percentFormatted = remember {
@@ -99,11 +99,11 @@ fun SpendsBudgetCard(
             spend,
             currency = currency,
         ),
-        label = stringResource(R.string.spent_budget),
+        label = "spent",
         content = {
             Spacer(modifier = Modifier.height(6.dp))
             Text(
-                text = stringResource(R.string.rest_budget_percent, percentFormatted),
+                text = "$percentFormatted% of budget",
                 style = MaterialTheme.typography.bodyMedium,
             )
         },

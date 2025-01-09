@@ -194,13 +194,7 @@ fun CountDaysChip(modifier: Modifier = Modifier, fromDate: Date, toDate: Date) {
         ) {
             Text(
                 modifier = Modifier.padding(12.dp, 0.dp),
-                text = String.format(
-                    pluralStringResource(
-                        R.plurals.days_count,
-                        count = days
-                    ),
-                    days,
-                ),
+                text = if (days > 1) "$days days" else "$days day",
                 style = MaterialTheme.typography.bodyMedium,
             )
         }
