@@ -1,6 +1,6 @@
 # dollargrain
 
-my own version of [buckwheat](https://buckwheat.app)
+my own version of [buckwheat](https://buckwheat.app)  
 there isnt much right now as i am still a beginner at android web dev, and a lot of the changes are backend
 
 ### donate
